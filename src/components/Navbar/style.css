@@ -1,0 +1,181 @@
+@media screen and (min-width: 968px) {
+  .fill-white {
+    fill: #fff;
+  }
+
+  .sidenav {
+    display: block;
+    position: fixed;
+    background: #017189;
+    top: 0;
+    width: 316px;
+    height: 100%;
+    z-index: 1;
+    padding-top: 3rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    color: #eee;
+    overflow-y: scroll;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 3.2rem;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .top {
+    width: 100%;
+    background: #2b899d;
+    border-radius: 8px;
+    margin-bottom: 5rem;
+  }
+
+  .wallet__summary {
+    padding: 1.2rem;
+  }
+
+  .item {
+    width: 100%;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .divider {
+    height: 1px;
+    width: 100%;
+    background: #eafbff;
+    margin-bottom: 1.6rem;
+  }
+
+  .summary__icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 0.8rem;
+    border-radius: 8px;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+  }
+
+  .summary__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .summary__details .title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 21px;
+  }
+
+  .summary__details .amount {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .btn__pay {
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .in {
+    color: #fff;
+    background: #fda4af;
+  }
+
+  .out {
+    margin-left: 0.7rem;
+    color: #2b899d;
+  }
+
+  .menu {
+    margin-bottom: 7rem;
+  }
+
+  .list__item {
+    width: 100%;
+  }
+
+  .item__link {
+    display: flex;
+    width: 100%;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    line-height: 24px;
+    font-weight: 800;
+    color: #fff;
+    border-radius: 8px;
+  }
+
+  .link__icons {
+    margin-right: 0.8rem;
+  }
+
+  .item__link:hover {
+    background: #fff;
+    color: #017189;
+  }
+
+  .item__link:hover path.fill {
+    fill: #017189;
+  }
+
+  .item__link:hover path.stroke {
+    stroke: #017189;
+  }
+
+  .footer {
+    margin-bottom: 10rem;
+  }
+
+  .footer .container {
+    background: #fff5e9;
+    border-radius: 8px;
+    padding: 2.4rem;
+  }
+
+  .container .top__content{
+    display: flex;
+    color: #000;
+    align-items: flex-start;
+    margin-bottom: 1.6rem;
+  }
+
+  .img__box {
+    margin-right: 0.7rem;
+  }
+
+  .headline h6 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  .headline p {
+    font-size: 1.4rem;
+    color: #2b4146;
+    line-height: 150%;
+  }
+
+  .btn__primary {
+    background: #017189;
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}
