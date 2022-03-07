@@ -6,3 +6,4 @@ export { default as Beneficiary } from './Beneficiary';
 export { default as Perk } from './Perk';
 export { default as Notification } from './Notification';
 export { default as ChevronDown } from './ChevronDown';
+export { default as Plus } from './Plus';

@@ -179,6 +179,10 @@
     cursor: pointer;
   }
 
+  .header {
+    margin-bottom: 5.9rem;
+  }
+
   .nav {
     display: flex;
     align-items: center;
