@@ -5,4 +5,3 @@ const ArrowUp = () => (
 );
   
 export default ArrowUp;
-  
