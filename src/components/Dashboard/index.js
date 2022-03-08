@@ -1,2 +1,3 @@
 import ScreenOne from './ScreenOne';
-export { ScreenOne };
+import ScreenTwo from './ScreenTwo';
+export { ScreenOne, ScreenTwo };
