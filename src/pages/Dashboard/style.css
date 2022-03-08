@@ -5,6 +5,12 @@
 @media screen and (min-width: 968px) {
   .content {
     padding: 3.2rem;
+    margin-left: 280px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
     margin-left: 316px;
   }
 }

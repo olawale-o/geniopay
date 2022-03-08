@@ -12,10 +12,12 @@ import './style.css';
 const ScreenOne = () => {
   return (
     <div className="screen">
-      <TopNavbar />
+      <TopNavbar title="Welcome, Huss Smith" />
       <div className="screen__content">
-        <div className="cards">
+        <div className="screen__top">
           <h1 className="title">Wallet</h1>
+        </div>
+        <div className="cards">
           <div className="account__container">
             <ul className="account__list">
               <li className="account__item">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router';
 import Dashboard from './pages/Dashboard';
-import { ScreenOne } from './components/Dashboard';
+import { ScreenOne, ScreenTwo } from './components/Dashboard';
 import './App.css';
 import ToggleContext from './context/toggleContext';
 
@@ -17,6 +17,7 @@ function App() {
           <Route path="/" element={(<Dashboard />)}>
             <Route index path="" element={(<Navigate to="screenone" />)} />
             <Route path="screenone" element={(<ScreenOne />)} />
+            <Route path="screentwo" element={(<ScreenTwo />)} />
           </Route>
         </Routes>
       </ToggleContext.Provider>
