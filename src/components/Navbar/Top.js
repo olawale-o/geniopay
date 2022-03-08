@@ -1,10 +1,17 @@
+import React from 'react';
 import tree from '../../assets/images/tree.png';
 import avatar from '../../assets/images/avatar.png';
 import { Notification, ChevronDown } from '../Svg';
+import { AiOutlineMenu } from "react-icons/ai";
+import ToggleContext from '../../context/toggleContext';
 
 const TopNavbar = () => {
+  const { toggle } = React.useContext(ToggleContext);
   return (
     <header className="header">
+      <button type="button" className="top__menu" onClick={() => toggle()}>
+        <AiOutlineMenu size={30} />
+      </button>
       <nav className="nav">
         <h3 className="title">Welcome, Huss Smith</h3>
         <div className="right">

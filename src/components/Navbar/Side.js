@@ -1,12 +1,19 @@
+import React from "react";
 import logo from "../../assets/images/logo.png";
 import wallet from "../../assets/images/wallet_fill.png";
 import slq from "../../assets/images/slq.png";
 import annoucement from "../../assets/images/annoucement.png";
 import { Grid, Wallet, Card, Fx, Beneficiary, Perk } from "../Svg";
+import { AiOutlineClose } from "react-icons/ai";
+import ToggleContext from '../../context/toggleContext';
 
 const SideNav = () => {
+  const { toggle } = React.useContext(ToggleContext);
   return (
     <div className="sidenav">
+      <button type="button" className="close__menu" onClick={() => toggle()}>
+        <AiOutlineClose />
+      </button>
       <a href="#" className="logo">
         <img src={logo} alt="logo" />
       </a>
