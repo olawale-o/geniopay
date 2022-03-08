@@ -15,3 +15,4 @@ export { default as Info } from './Info';
 export { default as Exchange } from './Exchange';
 export { default as PayIn } from './PayIn';
 export { default as Payment } from './Payment';
+export { default as ArrowUp } from './ArrowUp';
