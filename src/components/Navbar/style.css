@@ -256,20 +256,20 @@
   }
 
   .nav .title {
-    font-size: 2.8rem;
-    width: 40%;
+    font-size: 2rem;
+    width: 30%;
   }
 
   .nav .right {
     display: flex;
     align-items: center;
-    width: 55%;
-    margin-left: auto;
+    width: 70%;
+    margin-left: 1rem;
   }
 
   .search__field {
+    width: auto;
     display: block;
-    flex: 4;
     margin-right: 1rem;
   }
 
@@ -298,7 +298,7 @@
   }
 
   .profile {
-    flex: 3;
+    width: auto;
     display: flex;
     align-items: center;
     outline: none;
@@ -319,5 +319,11 @@
 
   .status {
     color: #22C55E;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search__field {
+    width: 50%;
   }
 }

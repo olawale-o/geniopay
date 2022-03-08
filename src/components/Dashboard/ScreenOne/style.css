@@ -1,31 +1,170 @@
+.screen__content .title {
+  font-size: 2.1rem;
+  margin-bottom: 1.6rem;
+  color: #001B21;
+  font-weight: 700;
+}
+
+.screen__content .subtitle {
+  font-size: 1.6rem;
+  color: #94A3B8;
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+}
+
+.cards {
+  margin-bottom: 5.8rem;
+}
+
+.account__container {
+  display: flex;
+  align-items: center;
+}
+
+.account__list {
+  overflow-x: auto;
+  margin-right: 1rem;
+  display: flex;
+  max-width: 80%;
+}
+
+.account__item {
+  min-width: 250px;
+  height: 200px;
+  height: 100%;
+  padding: 1rem;
+  background: #FFF6E6;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+.card__top {
+  margin-bottom: 4.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.type {
+  color: #001B21;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  margin-bottom: 0.8rem;
+}
+
+.currency {
+  font-size: 1.4rem;
+  color: #2B4146;
+  font-weight: 400;
+}
+
+.card__bottom .amount {
+  font-size: 2.8rem;
+  color: #001B21;
+  font-weight: 700;
+}
+
+.btn__outline {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #017189;
+  background: #fff;
+}
+
+.btn__outline:hover {
+  background: #017189;
+}
+
+.btn__outline:hover path {
+  stroke: #fff;
+}
+
+.quick__links {
+  margin-bottom: 7.2rem;
+}
+
+.action__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.action__item {
+  width: 150px;
+  padding: 2rem;
+  border: 1px solid #F1F5F9;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 1.6rem;
+  display: flex;
+}
+
+.btn__action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.btn__action img {
+  margin-bottom: 0.8rem;
+}
+
+.action__text {
+  font-size: 1.4rem;
+  color: #001B21;
+  line-height: 21px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.transaction__top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.transaction .right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: auto;
+}
+
+.btn__plain {
+  color: #017189;
+  font-size: 1.4rem;
+  background: none;
+  outline: none;
+  border: none;
+  background: none;
+  margin-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 500px) {
+  .action__item {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .action__list {
+    flex-wrap: nowrap;
+  }
+
+  .action__item {
+    margin-right: 1.2rem;
+  }
+}
+
 @media screen and (min-width: 969px) {
-  .screen__content .title {
-    font-size: 2.1rem;
-    margin-bottom: 1.6rem;
-    color: #001B21;
-    font-weight: 700;
-  }
-
-  .screen__content .subtitle {
-    font-size: 1.6rem;
-    color: #94A3B8;
-    font-weight: 400;
-    margin-bottom: 2.4rem;
-  }
-
-  .cards {
-    margin-bottom: 5.8rem;
-  }
-
-  .account__container {
-    display: flex;
-    align-items: center;
-  }
-
   .account__list {
-    overflow-x: auto;
     margin-right: 2rem;
-    display: flex;
     max-width: 90%;
   }
 
@@ -34,95 +173,52 @@
     height: 200px;
     height: 100%;
     padding: 2.4rem;
-    background: #FFF6E6;
-    margin-right: 1rem;
-    border-radius: 8px;
   }
 
-  .card__top {
-    margin-bottom: 4.3rem;
+  .action__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .transaction__top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .transaction .right {
     display: flex;
     justify-content: space-between;
+    width: 85%;
+    margin-left: auto;
   }
 
-  .type {
-    color: #001B21;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 24px;
-    margin-bottom: 0.8rem;
-  }
-
-  .currency {
+  .btn__plain {
+    color: #017189;
     font-size: 1.4rem;
-    color: #2B4146;
-    font-weight: 400;
-  }
-
-  .card__bottom .amount {
-    font-size: 2.8rem;
-    color: #001B21;
-    font-weight: 700;
-  }
-
-  .btn__outline {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    background: none;
     outline: none;
-    border: 1px solid #017189;
-    background: #fff;
+    border: none;
+    background: none;
+    margin-bottom: 1.6rem;
   }
+}
 
-  .btn__outline:hover {
-    background: #017189;
-  }
-
-  .btn__outline:hover path {
-    stroke: #fff;
-  }
-
-  .quick__links {
-    margin-bottom: 7.2rem;
-  }
-
+@media screen and (min-width: 1024px) {
   .action__list {
     display: flex;
   }
 
   .action__item {
     width: 120px;
-    padding: 2.4rem;
-    border: 1px solid #F1F5F9;
-    background: #fff;
-    border-radius: 8px;
-    margin-right: 1.6rem;
-  }
-
-  .btn__action {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: none;
-    outline: none;
-    border: none;
-  }
-
-  .btn__action img {
-    margin-bottom: 0.8rem;
-  }
-
-  .action__text {
-    font-size: 1.4rem;
-    color: #001B21;
-    line-height: 21px;
-    font-weight: 400;
-    line-height: 150%;
+    padding: 2rem;
+    margin-bottom: 0;
   }
 
   .transaction__top {
     display: flex;
+    flex-direction: row;
     width: 100%;
   }
 

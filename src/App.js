@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router';
+import Dashboard from './pages/Dashboard';
+import { ScreenOne } from './components/Dashboard';
 import './App.css';
+import ToggleContext from './context/toggleContext';
 
 function App() {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToggleContext.Provider value={{
+        isOpen,
+        toggle: () => setIsOpen(!isOpen),
+      }}>
+        <Routes>
+          <Route path="/" element={(<Dashboard />)}>
+            <Route index path="" element={(<Navigate to="screenone" />)} />
+            <Route path="screenone" element={(<ScreenOne />)} />
+          </Route>
+        </Routes>
+      </ToggleContext.Provider>
     </div>
   );
 }

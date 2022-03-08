@@ -34,6 +34,22 @@ const ScreenOne = () => {
                   </div>
                 </div>
               </li>
+              <li className="account__item">
+                <div className="account__card">
+                  <div className="card__top">
+                    <div className="card__top__left">
+                      <h4 className="type">Personal account</h4>
+                      <span className="currency">USD</span>
+                    </div>
+                    <div className="card__top__right">
+                      <img src={usa} alt="usa" />
+                    </div>
+                  </div>
+                  <div className="card__bottom">
+                    <span className="amount">$10,250.00</span>
+                  </div>
+                </div>
+              </li>
             </ul>
             <button type="button" className="btn__outline">
               <span>
