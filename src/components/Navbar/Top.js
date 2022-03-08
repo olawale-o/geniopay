@@ -5,7 +5,7 @@ import { Notification, ChevronDown } from '../Svg';
 import { AiOutlineMenu } from "react-icons/ai";
 import ToggleContext from '../../context/toggleContext';
 
-const TopNavbar = () => {
+const TopNavbar = ({ title }) => {
   const { toggle } = React.useContext(ToggleContext);
   return (
     <header className="header">
@@ -13,7 +13,7 @@ const TopNavbar = () => {
         <AiOutlineMenu size={30} />
       </button>
       <nav className="nav">
-        <h3 className="title">Welcome, Huss Smith</h3>
+        <h3 className="title">{title}</h3>
         <div className="right">
           <div className="search__field">
             <span></span>

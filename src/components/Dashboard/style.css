@@ -1,0 +1,12 @@
+.screen__top {
+  margin-bottom: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.title {
+  font-size: 2.1rem;
+  color: #001B21;
+  font-weight: 700;
+}
