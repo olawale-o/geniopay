@@ -45,6 +45,28 @@
   padding: 0 2rem;
 }
 
+.middle {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sm {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 2.4rem;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.sm .qty {
+  color: #000;
+  font-size: 1.6rem;
+}
+
 .top {
   width: 100%;
   background: #2b899d;
@@ -215,14 +237,6 @@
   display: none;
 }
 
-.notification {
-  display: none;
-}
-
-.plant {
-  display: none;
-}
-
 .profile {
   display: none;
 }
@@ -233,6 +247,12 @@
 }
 
 @media screen and (min-width: 968px) {
+  .sm {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
   .top__menu {
     display: none;
     visibility: hidden;
@@ -267,7 +287,6 @@
     align-items: center;
     justify-content: space-between;
     width: 60%;
-    margin-left: 1rem;
   }
 
   .search__field {
@@ -287,6 +306,7 @@
   .profile {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     outline: none;
     border: none;
     background: none;
@@ -317,15 +337,21 @@
     width: 50%;
   }
 
-  .notification {
-    display: block;
-    margin-right: 1rem;
+  .middle {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
   }
 
   .plant {
-    margin-right: 1rem;
     display: flex;
     align-items: center;
+    margin-right: 1rem;
+  }
+
+  .notification {
+    margin-right: 1rem;
   }
 
   .plant .qty {

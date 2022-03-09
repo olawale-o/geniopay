@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import wallet from "../../assets/images/wallet_fill.png";
 import slq from "../../assets/images/slq.png";
+import tree from '../../assets/images/tree.png';
 import annoucement from "../../assets/images/annoucement.png";
-import { Grid, Wallet, Card, Fx, Beneficiary, Perk } from "../Svg";
+import { Grid, Wallet, Card, Fx, Beneficiary, Perk, Notification } from "../Svg";
 import { AiOutlineClose } from "react-icons/ai";
 import ToggleContext from '../../context/toggleContext';
 
@@ -14,14 +16,23 @@ const SideNav = () => {
       <button type="button" className="close__menu" onClick={() => toggle()}>
         <AiOutlineClose />
       </button>
-      <a href="#" className="logo">
+      <Link to="/screenone" className="logo">
         <img src={logo} alt="logo" />
-      </a>
+      </Link>
+      <div className="sm">
+        <div className="plant">
+          <img src={tree} alt="tree" />
+          <span className="qty">0 Planted</span>
+        </div>
+        <span className="notification">
+          <Notification strokecolor="#000" />
+        </span>
+      </div>
       <div className="top">
         <div className="wallet__summary">
           <div className="item">
             <div className="summary__icon">
-              <img src={wallet} alt="image" />
+              <img src={wallet} alt="wallet" />
             </div>
             <div className="summary__details">
               <span className="title">Wallet balance</span>
@@ -31,7 +42,7 @@ const SideNav = () => {
           <div className="divider"></div>
           <div className="item">
             <div className="summary__icon">
-              <img src={slq} alt="image" />
+              <img src={slq} alt="slq" />
             </div>
             <div className="summary__details">
               <span className="title">Awarded Points</span>
@@ -49,52 +60,52 @@ const SideNav = () => {
       <div className="menu">
         <ul className="list">
           <li className="list__item">
-            <a href="#" className="item__link">
+            <Link to="screenone" className="item__link">
               <span className="link__icons">
                 <Grid fillcolor="#fff" />
               </span>
               <span className="link__text">Dashboard</span>
-            </a>
+            </Link>
           </li>
           <li className="list__item">
-            <a href="#" className="item__link">
+            <Link to="screentwo" className="item__link">
               <span className="link__icons">
                 <Wallet strokecolor="#fff" />
               </span>
               <span className="link__text">Wallet</span>
-            </a>
+            </Link>
           </li>
           <li className="list__item">
-            <a href="#" className="item__link">
+            <Link to= "/#" className="item__link">
               <span className="link__icons">
                 <Card strokecolor="#fff" />
               </span>
               <span className="link__text">Cards</span>
-            </a>
+            </Link>
           </li>
           <li className="list__item">
-            <a href="#" className="item__link">
+            <Link to="/#" className="item__link">
               <span className="link__icons">
                 <Fx strokecolor="#fff" />
               </span>
               <span className="link__text">FX Center</span>
-            </a>
+            </Link>
           </li>
           <li className="list__item">
-            <a href="#" className="item__link">
+            <Link to="/#" className="item__link">
               <span className="link__icons">
                 <Beneficiary strokecolor="#fff" />
               </span>
               <span className="link__text">Beneficiaries</span>
-            </a>
+            </Link>
           </li>
           <li className="list__item">
-            <a href="#" className="item__link">
+            <Link to="/#" className="item__link">
               <span className="link__icons">
                 <Perk strokecolor="#fff" />
               </span>
               <span className="link__text">Perks</span>
-            </a>
+            </Link>
           </li>
         </ul>
         </div>
@@ -103,7 +114,7 @@ const SideNav = () => {
           <div className="container">
             <div className="top__content">
               <div className="img__box">
-                <img src={annoucement} alt="image" />
+                <img src={annoucement} alt="annoucement" />
               </div>
               <div className="headline">
                 <h6>Refer and earn</h6>
