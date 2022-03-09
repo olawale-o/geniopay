@@ -1,3 +1,12 @@
+import React from "react";
+import { Line } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+} from 'chart.js';
 import { TopNavbar } from "../../Navbar";
 import usa from '../../../assets/images/usa.png';
 import wallet_action from '../../../assets/images/wallet_action.png';
@@ -8,6 +17,15 @@ import payment from '../../../assets/images/payment.png';
 import transfer from '../../../assets/images/transfer.png';
 import { Plus } from "../../Svg";
 import './style.css';
+import data from '../../../constants/data';
+import { options } from "../../../constants/options";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement
+);
 
 const ScreenOne = () => {
   return (
@@ -110,6 +128,13 @@ const ScreenOne = () => {
               <button type="button" className="btn__plain">Month</button>
               <button type="button" className="btn__plain">View Transaction History</button>
             </div>
+          </div>
+          <div className="chart">
+            <Line
+              datasetIdKey='id'
+              data={data}
+              options={options}
+            />
           </div>
         </div>
       </div>
