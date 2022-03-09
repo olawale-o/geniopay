@@ -19,13 +19,15 @@ const TopNavbar = ({ title }) => {
             <span></span>
             <input type="text" className="search__input" placeholder="Search" />
           </div>
-          <div className="plant">
-            <img src={tree} alt="tree" />
-            <span className="qty">0 Planted</span>
+          <div className="middle">
+            <div className="plant">
+              <img src={tree} alt="tree" />
+              <span className="qty">0 Planted</span>
+            </div>
+            <span className="notification">
+              <Notification strokecolor="#000" />
+            </span>
           </div>
-          <span className="notification">
-            <Notification strokecolor="#000" />
-          </span>
           <button className="profile" type="button">
             <img src={avatar} alt="avatar" className="avatar" />
             <div className="badge">

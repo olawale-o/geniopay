@@ -2,8 +2,9 @@ import React from "react";
 import logo from "../../assets/images/logo.png";
 import wallet from "../../assets/images/wallet_fill.png";
 import slq from "../../assets/images/slq.png";
+import tree from '../../assets/images/tree.png';
 import annoucement from "../../assets/images/annoucement.png";
-import { Grid, Wallet, Card, Fx, Beneficiary, Perk } from "../Svg";
+import { Grid, Wallet, Card, Fx, Beneficiary, Perk, Notification } from "../Svg";
 import { AiOutlineClose } from "react-icons/ai";
 import ToggleContext from '../../context/toggleContext';
 
@@ -17,6 +18,15 @@ const SideNav = () => {
       <a href="#" className="logo">
         <img src={logo} alt="logo" />
       </a>
+      <div className="sm">
+        <div className="plant">
+          <img src={tree} alt="tree" />
+          <span className="qty">0 Planted</span>
+        </div>
+        <span className="notification">
+          <Notification strokecolor="#000" />
+        </span>
+      </div>
       <div className="top">
         <div className="wallet__summary">
           <div className="item">
