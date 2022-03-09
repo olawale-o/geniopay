@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-import wallet from "../../assets/images/wallet_fill.png";
+import wallet from "../../assets/images/wallet.png";
 import slq from "../../assets/images/slq.png";
 import tree from '../../assets/images/tree.png';
 import annoucement from "../../assets/images/annoucement.png";
