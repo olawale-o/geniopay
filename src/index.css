@@ -37,3 +37,11 @@ button {
 .w-100 {
   width: 100%;
 }
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}

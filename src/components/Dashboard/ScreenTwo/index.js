@@ -1,6 +1,17 @@
 import React from 'react';
 import { TopNavbar } from "../../Navbar";
-import { CreditCard, Star, Document, Inflow, Info, Payment, PayIn, Exchange, ChevronDown, ArrowUp } from "../../Svg";
+import {
+  CreditCard,
+  Star,
+  Document,
+  Inflow,
+  Info,
+  Payment,
+  PayIn,
+  Exchange,
+  ChevronDown,
+  ArrowUp,
+} from "../../Svg";
 import './style.css';
 import usa from '../../../assets/images/usa.png';
 import eu from '../../../assets/images/eu.png';
@@ -18,7 +29,7 @@ const ScreenTwo = () => {
       <div className="screen__content">
         <div className="screen__top">
           <h1 className="title">Your Wallet (s)</h1>
-          <button className="btn__primary">Create new wallet</button>
+          <button className="btn__primary p-1">Create new wallet</button>
         </div>
         <div className="wallet__transaction">
           <div className="wallets">
@@ -27,7 +38,12 @@ const ScreenTwo = () => {
                 <span></span>
                 <input type="text" className="search__input" placeholder="Search" />
               </div>
-              <button type="button" className="btn__plain">All</button>
+              <button type="button" className="btn__plain center">
+                <span>All</span>
+                <span>
+                  <ChevronDown strokecolor="#017189" />
+                </span>
+              </button>
             </div>
 
             <div className="wallet__tabs">

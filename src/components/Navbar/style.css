@@ -214,7 +214,6 @@
 
 .btn__primary {
   background: #017189;
-  padding: 2rem;
   border-radius: 8px;
   outline: none;
   border: none;
@@ -225,7 +224,12 @@
 
 .header {
   margin-bottom: 3.9rem;
+  position: sticky;
+  top: 0;
+  padding-top: 2.4rem;
+  background: #fff;
 }
+
 .nav .title {
   font-size: 2rem;
   font-weight: 700;
@@ -235,6 +239,20 @@
 }
 
 .search__field {
+  flex: 4;
+  display: block;
+  margin-right: 1rem;
+}
+
+.search__input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 16px;
+  outline: none;
+  border: 1px solid #AAC0C5;
+}
+
+.top__search {
   display: none;
 }
 
@@ -245,6 +263,12 @@
 .dashboard.active .sidenav {
   display: block;
   transform: translateX(0);
+}
+
+@media screen and (min-width: 500px) {
+  .btn__primary {
+    padding: 2rem;
+  }
 }
 
 @media screen and (min-width: 968px) {
@@ -290,18 +314,8 @@
     width: 60%;
   }
 
-  .search__field {
-    flex: 4;
+  .top__search {
     display: block;
-    margin-right: 1rem;
-  }
-
-  .search__input {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 16px;
-    outline: none;
-    border: 1px solid #AAC0C5;
   }
 
   .profile {
