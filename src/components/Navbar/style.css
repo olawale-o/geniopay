@@ -226,7 +226,7 @@
   margin-bottom: 3.9rem;
   position: sticky;
   top: 0;
-  padding-top: 2.4rem;
+  padding: 0.5rem;
   background: #fff;
 }
 
@@ -295,6 +295,11 @@
 
   .header {
     margin-bottom: 5.9rem;
+  }
+
+  .header {
+    margin-bottom: 5.9rem;
+    padding-top: 2.4rem;
   }
 
   .nav {

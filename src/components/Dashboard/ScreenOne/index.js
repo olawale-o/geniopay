@@ -6,6 +6,7 @@ import {
   LinearScale,
   PointElement,
   LineElement,
+  Tooltip,
 } from 'chart.js';
 import { TopNavbar } from "../../Navbar";
 import usa from '../../../assets/images/usa.png';
@@ -24,7 +25,8 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement
+  LineElement,
+  Tooltip,
 );
 
 const ScreenOne = () => {
