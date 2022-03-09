@@ -122,7 +122,7 @@ const SideNav = () => {
               </div>
             </div>
 
-            <button className="btn__primary w-100">Invite Friends</button>
+            <button className="btn__primary w-100 p-2">Invite Friends</button>
           </div>
         </div>
     </div>

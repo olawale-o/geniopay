@@ -1,5 +1,10 @@
 export const options = {
   responsive: true,
+  elements: {
+    line: {
+      tension: 0.3,
+    },
+  },
   plugins: {
     tooltips: {
       mode: 'index',

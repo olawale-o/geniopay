@@ -15,7 +15,7 @@ const TopNavbar = ({ title }) => {
       <nav className="nav">
         <h3 className="title">{title}</h3>
         <div className="right">
-          <div className="search__field">
+          <div className="search__field top__search">
             <span></span>
             <input type="text" className="search__input" placeholder="Search" />
           </div>
