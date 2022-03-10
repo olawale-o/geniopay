@@ -5,7 +5,7 @@ import wallet from "../../assets/images/wallet.png";
 import slq from "../../assets/images/slq.png";
 import tree from '../../assets/images/tree.png';
 import annoucement from "../../assets/images/annoucement.png";
-import links from "../../constants/sideLinks";
+import { links } from "../../constants/links";
 import { Notification } from "../Svg";
 import { AiOutlineClose } from "react-icons/ai";
 import ToggleContext from '../../context/toggleContext';
