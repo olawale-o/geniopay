@@ -20,6 +20,7 @@ import { Plus } from "../../Svg";
 import './style.css';
 import data from '../../../constants/data';
 import { options } from "../../../constants/options";
+import accounts  from '../../../constants/accounts';
 
 ChartJS.register(
   CategoryScale,
@@ -40,38 +41,24 @@ const ScreenOne = () => {
         <div className="cards">
           <div className="account__container">
             <ul className="account__list">
-              <li className="account__item">
-                <div className="account__card">
-                  <div className="card__top">
-                    <div className="card__top__left">
-                      <h4 className="type">Personal account</h4>
-                      <span className="currency">USD</span>
+              {accounts.map((account) => (
+                <li className="account__item" key={account.id}>
+                  <div className="account__card">
+                    <div className="card__top">
+                      <div className="card__top__left">
+                        <h4 className="type">{account.name}</h4>
+                        <span className="currency">{account.currency}</span>
+                      </div>
+                      <div className="card__top__right">
+                        <img src={account.img} alt={account.currency} />
+                      </div>
                     </div>
-                    <div className="card__top__right">
-                      <img src={usa} alt="usa" />
-                    </div>
-                  </div>
-                  <div className="card__bottom">
-                    <span className="amount">$10,250.00</span>
-                  </div>
-                </div>
-              </li>
-              <li className="account__item">
-                <div className="account__card">
-                  <div className="card__top">
-                    <div className="card__top__left">
-                      <h4 className="type">Personal account</h4>
-                      <span className="currency">USD</span>
-                    </div>
-                    <div className="card__top__right">
-                      <img src={usa} alt="usa" />
+                    <div className="card__bottom">
+                      <span className="amount">${account.balance}</span>
                     </div>
                   </div>
-                  <div className="card__bottom">
-                    <span className="amount">$10,250.00</span>
-                  </div>
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
             <button type="button" className="btn__outline">
               <span>
