@@ -5,7 +5,8 @@ import wallet from "../../assets/images/wallet.png";
 import slq from "../../assets/images/slq.png";
 import tree from '../../assets/images/tree.png';
 import annoucement from "../../assets/images/annoucement.png";
-import { Grid, Wallet, Card, Fx, Beneficiary, Perk, Notification } from "../Svg";
+import { links } from "../../constants/links";
+import { Notification } from "../Svg";
 import { AiOutlineClose } from "react-icons/ai";
 import ToggleContext from '../../context/toggleContext';
 
@@ -59,57 +60,16 @@ const SideNav = () => {
   
       <div className="menu">
         <ul className="list">
-          <li className="list__item">
-            <Link to="screenone" className="item__link">
-              <span className="link__icons">
-                <Grid fillcolor="#fff" />
-              </span>
-              <span className="link__text">Dashboard</span>
-            </Link>
-          </li>
-          <li className="list__item">
-            <Link to="screentwo" className="item__link">
-              <span className="link__icons">
-                <Wallet strokecolor="#fff" />
-              </span>
-              <span className="link__text">Wallet</span>
-            </Link>
-          </li>
-          <li className="list__item">
-            <Link to= "/#" className="item__link">
-              <span className="link__icons">
-                <Card strokecolor="#fff" />
-              </span>
-              <span className="link__text">Cards</span>
-            </Link>
-          </li>
-          <li className="list__item">
-            <Link to="/#" className="item__link">
-              <span className="link__icons">
-                <Fx strokecolor="#fff" />
-              </span>
-              <span className="link__text">FX Center</span>
-            </Link>
-          </li>
-          <li className="list__item">
-            <Link to="/#" className="item__link">
-              <span className="link__icons">
-                <Beneficiary strokecolor="#fff" />
-              </span>
-              <span className="link__text">Beneficiaries</span>
-            </Link>
-          </li>
-          <li className="list__item">
-            <Link to="/#" className="item__link">
-              <span className="link__icons">
-                <Perk strokecolor="#fff" />
-              </span>
-              <span className="link__text">Perks</span>
-            </Link>
-          </li>
+          {links.map((link) => (
+            <li className="list__item" key={link.id}>
+              <Link to={link.url} className="item__link">
+                <span className="link__icons">{link.icon}</span>
+                <span className="link__text">{link.name}</span>
+              </Link>
+            </li>
+          ))}
         </ul>
         </div>
-
         <div className="footer">
           <div className="container">
             <div className="top__content">
