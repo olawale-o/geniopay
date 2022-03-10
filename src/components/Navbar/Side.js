@@ -61,7 +61,7 @@ const SideNav = () => {
       <div className="menu">
         <ul className="list">
           {links.map((link) => (
-            <li className="list__item">
+            <li className="list__item" key={link.id}>
               <Link to={link.url} className="item__link">
                 <span className="link__icons">{link.icon}</span>
                 <span className="link__text">{link.name}</span>

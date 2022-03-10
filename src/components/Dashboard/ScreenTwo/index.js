@@ -13,9 +13,7 @@ import {
   ArrowUp,
 } from "../../Svg";
 import './style.css';
-import usa from '../../../assets/images/usa.png';
-import eu from '../../../assets/images/eu.png';
-import uk from '../../../assets/images/uk.png';
+import wallets from '../../../constants/wallets';
 
 const ScreenTwo = () => {
   const [index, setIndex] = React.useState(1);
@@ -54,43 +52,21 @@ const ScreenTwo = () => {
               </div>
               <div className="tab__container">
                 <div className={`tab__content ${index === 1 ? "active-content" : ""}`}>
-                  <div className="wallet__card">
-                    <div className="left__card-content">
-                      <img src={eu} alt="eu" />
-                      <div className="left__content">
-                        <h3>EUR Wallet</h3>
-                        <span>EUR</span>
+                  {wallets.map((wallet) => (
+                    <div className="wallet__card" key={wallet.id}>
+                      <div className="left__card-content">
+                        <img src={wallet.img} alt={wallet.currency} />
+                        <div className="left__content">
+                          <h3>{wallet.title}</h3>
+                          <span>{wallet.currency}</span>
+                        </div>
+                      </div>
+                      <div className="right__content">
+                        <h3>${wallet.balance}</h3>
+                        {wallet.default && <span>Default</span>}
                       </div>
                     </div>
-                    <div className="right__content">
-                      <h3>$2,000,000.50</h3>
-                      <span>Default</span>
-                    </div>
-                  </div>
-                  <div className="wallet__card">
-                    <div className="left__card-content">
-                      <img src={usa} alt="usa" />
-                      <div className="left__content">
-                        <h3>Personal Account</h3>
-                        <span>USD</span>
-                      </div>
-                    </div>
-                    <div className="right__content">
-                      <h3>$2,000,000.50</h3>
-                    </div>
-                  </div>
-                  <div className="wallet__card">
-                    <div className="left__card-content">
-                      <img src={uk} alt="uk" />
-                      <div className="left__content">
-                        <h3>School Savings</h3>
-                        <span>GBP</span>
-                      </div>
-                    </div>
-                    <div className="right__content">
-                      <h3>$2,000,000.50</h3>
-                    </div>
-                  </div>
+                  ))}
                 </div>
                 <div className={`tab__content ${index === 2 ? "active-content" : ""}`}>
                   <h6>Inactive Cards</h6>
