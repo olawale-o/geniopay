@@ -48,9 +48,9 @@ const ScreenTwo = () => {
 
             <div className="wallet__tabs">
               <div className="tabs">
-                <button className="tab active" onClick={() => toggleTab(1)}>Active(3)</button>
-                <button className="tab" onClick={() => toggleTab(2)}>Inactive(2)</button>
-                <button className="tab" onClick={() => toggleTab(3)}>Closed(0)</button>
+                <button className={`tab ${index === 1 && 'active'}`} onClick={() => toggleTab(1)}>Active(3)</button>
+                <button className={`tab ${index === 2 && 'active'}`} onClick={() => toggleTab(2)}>Inactive(2)</button>
+                <button className={`tab ${index === 3 && 'active'}`} onClick={() => toggleTab(3)}>Closed(0)</button>
               </div>
               <div className="tab__container">
                 <div className={`tab__content ${index === 1 ? "active-content" : ""}`}>
@@ -205,9 +205,9 @@ const ScreenTwo = () => {
 
             <div className="bottom">
               <div className="bottom__tabs">
-                <button className="tab" onClick={() => toggleActivityTab(1)}>Activity</button>
-                <button className="tab active" onClick={() => toggleActivityTab(2)}>Transactions</button>
-                <button className="tab" onClick={() => toggleActivityTab(3)}>Invoices</button>
+                <button className={`tab ${activityIndex === 1 && 'active'}`} onClick={() => toggleActivityTab(1)}>Activity</button>
+                <button className={`tab ${activityIndex === 2 && 'active'}`} onClick={() => toggleActivityTab(2)}>Transactions</button>
+                <button className={`tab ${activityIndex === 3 && 'active'}`} onClick={() => toggleActivityTab(3)}>Invoices</button>
               </div>
               <div className="history">
                 <span className="date">22 Jul, 2022</span>
