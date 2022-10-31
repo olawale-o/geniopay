@@ -17,11 +17,54 @@ import usa from '../../../assets/images/usa.png';
 import eu from '../../../assets/images/eu.png';
 import uk from '../../../assets/images/uk.png';
 
+const WALLET_TABS = [
+  {
+    index: 1,
+    tabName: 'Active',
+    tabQty: 3,
+    accounts: [
+      {
+        accoutName: 'EUR Wallet',
+        currency: 'EUR',
+        currencyImg: eu,
+        amount: '2,000,000.50',
+        isDefault: true,
+      },
+      {
+        accoutName: 'Personal Account',
+        currency: 'USD',
+        currencyImg: usa,
+        amount: '2,000,000.50',
+        isDefault: false,
+      },
+      {
+        accoutName: 'School Account',
+        currency: 'GBP',
+        currencyImg: uk,
+        amount: '2,000,000.50',
+        isDefault: false,
+      },
+    ]
+  },
+  {
+    index: 2,
+    tabName: 'Inactive',
+    tabQty: 2,
+    accounts: [],
+  },
+  {
+    index: 3,
+    tabName: 'Closed',
+    tabQty: 0,
+    accounts: [],
+  },
+];
+
 const ScreenTwo = () => {
-  const [index, setIndex] = React.useState(1);
+  const [activeIndex, setActiveIndex] = React.useState(1);
   const [activityIndex, setActivityIndex] = React.useState(2);
 
-  const toggleTab = (index) => setIndex(index);
+  const toggleTab = (index) => setActiveIndex(index);
   const toggleActivityTab = (index) => setActivityIndex(index);
   return (
     <div className="screen">
@@ -48,56 +91,39 @@ const ScreenTwo = () => {
 
             <div className="wallet__tabs">
               <div className="tabs">
-                <button className={`tab ${index === 1 && 'active'}`} onClick={() => toggleTab(1)}>Active(3)</button>
-                <button className={`tab ${index === 2 && 'active'}`} onClick={() => toggleTab(2)}>Inactive(2)</button>
-                <button className={`tab ${index === 3 && 'active'}`} onClick={() => toggleTab(3)}>Closed(0)</button>
+                {WALLET_TABS.map(({ tabName, tabQty, index }) => (
+                  <button
+                    key={index}
+                    className={`tab ${activeIndex === index && 'active'}`}
+                    onClick={() => toggleTab(index)}
+                    >
+                    {`${tabName}(${tabQty})`}
+                  </button>
+                ))}
               </div>
               <div className="tab__container">
-                <div className={`tab__content ${index === 1 ? "active-content" : ""}`}>
-                  <div className="wallet__card">
-                    <div className="left__card-content">
-                      <img src={eu} alt="eu" />
-                      <div className="left__content">
-                        <h3>EUR Wallet</h3>
-                        <span>EUR</span>
+                {WALLET_TABS.map((wallet) => (
+                  <div
+                    className={`tab__content ${activeIndex ===  wallet.index && "active-content"}`}
+                    key={wallet.index}
+                  >
+                    {wallet.accounts.length > 0 ? wallet.accounts.map((account) => (
+                      <div className="wallet__card" key={account.accoutName}>
+                        <div className="left__card-content">
+                          <img src={account.currencyImg} alt="eu" />
+                          <div className="left__content">
+                            <h3>{account.accoutName}</h3>
+                            <span>{account.currency}</span>
+                          </div>
+                        </div>
+                        <div className="right__content">
+                          <h3>${account.amount}</h3>
+                          <span>{account.isDefault && 'Default'}</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="right__content">
-                      <h3>$2,000,000.50</h3>
-                      <span>Default</span>
-                    </div>
+                    )): (<h6>{`${wallet.tabName} Cards`}</h6>)}
                   </div>
-                  <div className="wallet__card">
-                    <div className="left__card-content">
-                      <img src={usa} alt="usa" />
-                      <div className="left__content">
-                        <h3>Personal Account</h3>
-                        <span>USD</span>
-                      </div>
-                    </div>
-                    <div className="right__content">
-                      <h3>$2,000,000.50</h3>
-                    </div>
-                  </div>
-                  <div className="wallet__card">
-                    <div className="left__card-content">
-                      <img src={uk} alt="uk" />
-                      <div className="left__content">
-                        <h3>School Savings</h3>
-                        <span>GBP</span>
-                      </div>
-                    </div>
-                    <div className="right__content">
-                      <h3>$2,000,000.50</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className={`tab__content ${index === 2 ? "active-content" : ""}`}>
-                  <h6>Inactive Cards</h6>
-                </div>
-                <div className={`tab__content ${index === 3 ? "active-content" : ""}`}>
-                  <h6>Closed Cards</h6>
-                </div>
+                ))}
               </div>
             </div>
           </div>
