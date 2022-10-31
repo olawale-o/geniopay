@@ -29,6 +29,15 @@ ChartJS.register(
   Tooltip,
 );
 
+const QUICK_ACTIONS = [
+  { icon: wallet_action, text: 'Add new wallet'},
+  { icon: card_action, text: 'Add new card'},
+  { icon: balance, text: 'Balance exchange'},
+  { icon: transfer, text: 'Transfer to account'},
+  { icon: voucher, text: 'Generate voucher'},
+  { icon: payment, text: 'Payment link'},
+]
+
 const ScreenOne = () => {
   return (
     <div className="screen">
@@ -40,38 +49,24 @@ const ScreenOne = () => {
         <div className="cards">
           <div className="account__container">
             <ul className="account__list">
-              <li className="account__item">
-                <div className="account__card">
-                  <div className="card__top">
-                    <div className="card__top__left">
-                      <h4 className="type">Personal account</h4>
-                      <span className="currency">USD</span>
+              {Array.from([0, 1]).map((x) => (
+                <li className="account__item" key={x}>
+                  <div className="account__card">
+                    <div className="card__top">
+                      <div className="card__top__left">
+                        <h4 className="type">Personal account</h4>
+                        <span className="currency">USD</span>
+                      </div>
+                      <div className="card__top__right">
+                        <img src={usa} alt="usa" />
+                      </div>
                     </div>
-                    <div className="card__top__right">
-                      <img src={usa} alt="usa" />
-                    </div>
-                  </div>
-                  <div className="card__bottom">
-                    <span className="amount">$10,250.00</span>
-                  </div>
-                </div>
-              </li>
-              <li className="account__item">
-                <div className="account__card">
-                  <div className="card__top">
-                    <div className="card__top__left">
-                      <h4 className="type">Personal account</h4>
-                      <span className="currency">USD</span>
-                    </div>
-                    <div className="card__top__right">
-                      <img src={usa} alt="usa" />
+                    <div className="card__bottom">
+                      <span className="amount">$10,250.00</span>
                     </div>
                   </div>
-                  <div className="card__bottom">
-                    <span className="amount">$10,250.00</span>
-                  </div>
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
             <button type="button" className="btn__outline">
               <span>
@@ -84,42 +79,14 @@ const ScreenOne = () => {
           <h2 className="title">Quick links</h2>
           <h4 className="subtitle">Our frequently used actions for easy access.</h4>
           <ul className="action__list">
-            <li className="action__item">
-              <button type="button" className="btn__action">
-                <img src={wallet_action} alt="wallet" />
-                <span className="action__text">Add new wallet</span>
-              </button>
-            </li>
-            <li className="action__item">
-              <button type="button" className="btn__action">
-                <img src={card_action} alt="card" />
-                <span className="action__text">Add new card</span>
-              </button>
-            </li>
-            <li className="action__item">
-              <button type="button" className="btn__action">
-                <img src={balance} alt="balance" />
-                <span className="action__text">Balance exchange</span>
-              </button>
-            </li>
-            <li className="action__item">
-              <button type="button" className="btn__action">
-                <img src={transfer} alt="transfer" />
-                <span className="action__text">Transfer to account</span>
-              </button>
-            </li>
-            <li className="action__item">
-              <button type="button" className="btn__action">
-                <img src={voucher} alt="voucher" />
-                <span className="action__text">Generate voucher</span>
-              </button>
-            </li>
-            <li className="action__item">
-              <button type="button" className="btn__action">
-                <img src={payment} alt="payment" />
-                <span className="action__text">Payment link</span>
-              </button>
-            </li>
+            {QUICK_ACTIONS.map((action) => (
+              <li className="action__item" key={action.text}>
+                <button type="button" className="btn__action">
+                  <img src={action.icon} alt={action.text} />
+                  <span className="action__text">{action.text}</span>
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
 
