@@ -24,7 +24,6 @@ ChartJS.register(
   LineElement,
   Tooltip,
 );
-
 const ScreenOne = () => {
   return (
     <div className="screen">
